@@ -1,0 +1,29 @@
+header img {
+    padding: 30px 15px;
+}
+.header-nav {
+    position: fixed;
+}
+/* #child-nav {
+    display: none;
+} */
+.header-nav li {
+    list-style: none;
+}
+#nav-text {
+    position: relative;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #dfdfdf;
+    border-radius: 0;
+    font-size: 1.4rem;
+    text-align: left;
+}
+#nav-text::before {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    border-right: 1px solid #dfdfdf;
+    content: "";
+}
