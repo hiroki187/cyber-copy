@@ -1,8 +1,15 @@
+
+header {
+    position: fixed;
+}
 header img {
     padding: 30px 15px;
 }
 .header-nav {
-    position: fixed;
+    width: 100%;
+}
+#parent-nav {
+    padding: 0;
 }
 /* #child-nav {
     display: none;
@@ -11,19 +18,22 @@ header img {
     list-style: none;
 }
 #nav-text {
+    width: 100%;
     position: relative;
     padding: 15px;
     border: none;
     border-bottom: 1px solid #dfdfdf;
-    border-radius: 0;
     font-size: 1.4rem;
     text-align: left;
 }
-#nav-text::before {
+/* #nav-text::before {
     position: absolute;
     top: 0;
     right: -10px;
     height: 100%;
     border-right: 1px solid #dfdfdf;
     content: "";
+} */
+#child-nav a {
+    display: block;
 }
