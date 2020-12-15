@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="js/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="js/slick.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/script.js"></script>
     <title>サイバー大学模写</title>
@@ -13,22 +17,193 @@
 
 <body>
     <header>
-        <img src="https://www.cyber-u.ac.jp/module/img/common/logo-pc.png" alt="header-logo">
-        <div class="header-nav">
-            <ul id="parent-nav">
+        <div class="nav-wrap">
+            <img src="https://www.cyber-u.ac.jp/module/img/common/logo-pc.png" alt="header-logo">
+            <ul class="parent-nav">
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+                <li class="parent-nav-content">
+                    <a href="#">テキストテキスト</a>
+                </li>
+            </ul>
+    
+            <ul class="child-nav active">
                 <li>
-                    <a id="nav-text" href="#">テキストテキスト</a>
-                    <ul id="child-nav">
-                        <li>
-                            <a href="#">テキストテキスト</a>
-                            <a href="#">テキストテキスト</a>
-                            <a href="#">テキストテキスト</a>
-                            <a href="#">テキストテキスト</a>
-                        </li>
-                    </ul>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+            </ul>
+            <ul class="child-nav active">
+                <li>
+                    <a href="#">BBBBBBBBBB</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+            </ul>
+            <ul class="child-nav active">
+                <li>
+                    <a href="#">CCCCCCCCCC</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+            </ul>
+            <ul class="child-nav active">
+                <li>
+                    <a href="#">DDDDDDDDDD</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+            </ul>
+            <ul class="child-nav active">
+                <li>
+                    <a href="#">EEEEEEEEEE</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+            </ul>
+            <ul class="child-nav active">
+                <li>
+                    <a href="#">FFFFFFFFFF</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+            </ul>
+            <ul class="child-nav active">
+                <li>
+                    <a href="#">GGGGGGGGGG</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+            </ul>
+            <ul class="child-nav active">
+                <li>
+                    <a href="#">HHHHHHHHHH</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
+                </li>
+                <li>
+                    <a href="#">AAAAAAAAAA</a>
                 </li>
             </ul>
         </div>
+        <div class="main-wrap">
+            <div class="main">
+                <ul class="slider">
+                    <li><a href="#"><img src="images/cyber-img1.jpg" alt="image01"></a></li>
+                    <li><a href="#"><img src="images/cyber-img2.jpg" alt="image02"></a></li>
+                    <li><a href="#"><img src="images/cyber-img3.jpg" alt="image03"></a></li>
+                    <li><a href="#"><img src="images/cyber-img4.jpg" alt="image04"></a></li>
+                    <li><a href="#"><img src="images/cyber-img5.jpg" alt="image05"></a></li>
+                    <li><a href="#"><img src="images/cyber-img6.png" alt="image06"></a></li>
+                    <li><a href="#"><img src="images/cyber-img7.png" alt="image07"></a></li>
+                </ul>
+            </div>
+        </div>
     </header>
+    <div class="fadein">
+        <div>子要素</div>
+        <div>子要素</div>
+        <div>子要素</div>
+        <div>子要素</div>
+    </div>
+    
+
 </body>
 </html>
