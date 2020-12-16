@@ -1,6 +1,7 @@
 
 header {
     display: flex;
+    z-index: 100;
 }
 .nav-wrap {
     position: fixed;
@@ -32,14 +33,16 @@ header img {
     content: "";
 } */
 .child-nav {
-    /* display: none; */
     position: absolute;
     top: 0;
-    left: 240px;
+    /* left: 240px; */
     width: 300px;
     height: 100%;
     padding-top: 80px;
     background-color: #fff;
+    transition-duration: 1s;
+    /* transition-timing-function: ease-in; */
+    transition-delay: 1s;
     z-index: 100;
 }
 .child-nav a {
@@ -59,16 +62,27 @@ header img {
     display: none;
 }
 
+
+.main-wrap {
+    height: 1500px;
+}
+.main {
+    padding: 0 300px;
+    z-index: 50;
+}
 .slider{
     margin: 100px auto;
-    width: 40%;
-    z-index: 50;
+    width: 800px;
 }
 .slider img{
     height: auto;
     width: 100%;
 }
+
+
 /*slick setting*/
+
+
 .slick-prev:before,
 .slick-next:before {
     color: #000;
@@ -84,3 +98,40 @@ header img {
     opacity: 1;
     transform: translate(0, 0);
 }
+
+
+/* ページトップアイコン*/
+
+
+#page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    background: #aaaaaacc;
+    opacity: 0.3;
+    border-radius: 10px 0 0 10px;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f106';
+    font-size: 25px;
+    color: #000;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
