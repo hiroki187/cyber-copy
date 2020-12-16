@@ -63,6 +63,9 @@ header img {
 }
 
 
+/* スライダー */
+
+
 .main-wrap {
     height: 1500px;
 }
@@ -72,7 +75,7 @@ header img {
 }
 .slider{
     margin: 100px auto;
-    width: 800px;
+    width: 600px;
 }
 .slider img{
     height: auto;
