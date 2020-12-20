@@ -1,11 +1,11 @@
 $(function () {
     $(".parent-nav-content").hover(function() {
         const index = $(".parent-nav-content").index(this);
-        $(".child-nav").eq(index).removeClass("active").css("transform", "translate( 240px,0)");
-        // $(".child-nav").animate({"left" : "240px"}, 100);
+        $(".child-nav").eq(index).addClass("active")
+        // $(".child-nav").eq(index).removeClass("active").css("left", "240px");
     }, function() {
         const index = $(".parent-nav-content").index(this);
-        $(".child-nav").eq(index).addClass("active");
+        $(".child-nav").eq(index).removeClass("active");
     });
 
     $(".slider").slick({

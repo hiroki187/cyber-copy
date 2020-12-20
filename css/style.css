@@ -1,7 +1,6 @@
 
 header {
     display: flex;
-    z-index: 100;
 }
 .nav-wrap {
     position: fixed;
@@ -9,6 +8,10 @@ header {
 }
 header img {
     padding: 30px 15px;
+}
+.parent-nav {
+    position: relative;
+    z-index: 20;
 }
 .parent-nav li {
     max-width: 240px;
@@ -35,17 +38,14 @@ header img {
 .child-nav {
     position: absolute;
     top: 0;
-    /* left: 240px; */
-    width: 300px;
-    height: 100%;
+    left: 0;
     padding-top: 80px;
     background-color: #fff;
     transition-duration: 1s;
-    /* transition-timing-function: ease-in; */
-    transition-delay: 1s;
-    z-index: 100;
+    z-index: 10;
 }
 .child-nav a {
+    position: relative;
     color: #000000;
     display: block;
     transition: 0.35s;
@@ -53,13 +53,22 @@ header img {
     border-bottom: 1px solid #efefef;
 }
 .child-nav a:first-child {
+    position: relative;
     border-top: 1px solid #efefef;
 }
 .child-nav li {
+    position: relative;
     padding: 0 15px;
 }
 .active {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    padding-top: 80px;
+    background-color: #fff;
+    transform: translate(240px, 0);
+    z-index: 11;
 }
 
 
@@ -71,7 +80,6 @@ header img {
 }
 .main {
     padding: 0 300px;
-    z-index: 50;
 }
 .slider{
     margin: 100px auto;
