@@ -12,6 +12,7 @@ header img {
 .parent-nav {
     position: relative;
     z-index: 20;
+    background-color: #fff;
 }
 .parent-nav li {
     max-width: 240px;
