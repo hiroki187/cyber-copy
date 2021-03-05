@@ -1,0 +1,209 @@
+
+
+
+.l-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 6px 0 10px -10px;
+    z-index: 1000;
+    height: 100%;
+}
+.p-top-nav-wrap {
+    background-color: #fff;
+    width: 240px;
+    padding-bottom: 70px;
+    a {
+        display: block;
+        position: relative;
+        z-index: 9999;
+        img {
+            width: 100%;
+            padding: 30px 25px;
+            z-index: 900;
+            background-color: #fff;
+        }
+    }
+    .p-top-parent-nav {
+        position: relative;
+        z-index: 900;
+        background-color: #fff;
+    }
+}
+.p-top-parent-nav-content-last {
+    border-bottom: 1px solid #dfdfdf;
+}
+.p-top-parent-nav-content {
+    max-width: 240px;
+    border-top: 1px solid #dfdfdf;
+    position: relative;
+    a {
+        display: block;
+        color: #000;
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        font-size: 0.85rem;
+        transition: 1.5s;
+        &:hover {
+            background-color: #dfdfdf;
+            transition: .35s;
+            span  {
+                border-color: #fff;
+            }
+        }
+    }
+    span {
+        color: #e92e2e;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        border-left: 1px solid #dfdfdf;
+        padding: 15px 0 15px 20px;
+        height: 100%;
+        font-size: 0.8rem;
+    }
+    .header-nav-span-last {
+        border: none;
+    }
+}
+.p-top-guideAndrecruit {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    padding: 0 15px;
+    margin: 12px 0;
+    a {
+        width: auto;
+        margin-bottom: 10px;
+        color: #000;
+        span {
+            color: #e92e2e;
+            padding-right: 15px;
+        } 
+    }
+}
+.p-top-ocAndentry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    a {
+        border: 1px solid #000;
+        padding: 8px 20px;
+        border-radius: 10rem;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        color: #000;
+        position: relative;
+        transition: .35s;
+        &:hover {
+            color: #fff;
+            background-color: #000;
+            transition: .35s;
+            span {
+                color: #fff;
+            }
+        }
+        span {
+            position: absolute;
+            right: 20px;
+            color: #e92e2e;
+        }
+    }
+
+}
+.p-top-language-wrap {
+    margin-bottom: 30px;
+    padding: 0 15px;
+    .p-top-language {
+        border: 1px solid #000;
+        display: flex;
+        border-radius: 6px;
+        a {
+            padding: 5px;
+            text-align: center;
+            width: 50%;
+            font-size: 0.8rem;
+        }
+        .p-top-language-JP {
+            border-radius: 5px 0 0 5px;
+            background-color: #000;
+            color: #fff;
+        }
+        .p-top-language-EN {
+            border-radius: 0 5px 5px 0;
+            background-color: #fff;
+            color: #000;
+            transition: .35s;
+            &:hover {
+                transition: .35s;
+                background-color: #dfdfdf;
+            }
+        }
+    }
+}
+.p-top-header-sns {
+    display: flex;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    a {
+    width: 33.33333%;
+    border-right: 1px solid #dfdfdf;
+    text-align: center;
+    padding: 15px;
+    color: #000;
+    font-size: 1.5rem;
+    &:last-child {
+        border-right: none;
+    }
+    }
+}
+
+
+ 
+.p-top-child-nav {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    padding-top: 50px;
+    background-color: #fff;
+    transition-duration: .35s;
+    z-index: 800;
+    height: 100%;
+    box-shadow: 6px 6px 13px -13px inset;
+    li {
+        position: relative;
+        padding: 0 15px;
+        border-top: 1px solid #efefef;
+        margin: 0 30px;
+        &:last-child {
+            position: relative;
+            border-bottom: 1px solid #efefef;
+        }
+    }
+    a {
+        position: relative;
+        color: #000;
+        display: block;
+        transition: 0.35s;
+        padding: 15px 0;
+        font-size: 0.85rem;
+        span {
+            position: absolute;
+            right: 0;
+            color: #e92e2e;
+        }
+    }
+}
+.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    padding-top: 80px;
+    background-color: #fff;
+    transform: translate(240px, 0);
+}

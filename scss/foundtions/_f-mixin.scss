@@ -1,0 +1,45 @@
+
+
+$pc: 1200px;
+$sp: 768px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin p-top-common-layout {
+  padding: 70px 50px;
+}
+
+@mixin p-top-section-title {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  h2 {
+      font-size: 3rem;
+      margin-left: 110px;
+      display: flex;
+      &::before {
+          content: "";
+          position: absolute;
+          background-color: #000;
+          top: 50%;
+          left: 0;
+          width: 80px;
+          height: 1px;
+      }
+  }
+}
+
+@mixin article-style {
+  border-radius: 16px 0 16px 0;
+  background-color: #ffffff;
+  color: #000;
+}

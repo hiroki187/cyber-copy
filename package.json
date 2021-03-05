@@ -1,0 +1,24 @@
+{
+  "name": "cyber-mosya",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hiroki187/cyber-mosya.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp sass-watch"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "sass": "^1.32.7",
+    "sass-watch": "^0.1.0"
+  }
+}
