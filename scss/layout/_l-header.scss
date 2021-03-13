@@ -207,3 +207,14 @@
     background-color: #fff;
     transform: translate(240px, 0);
 }
+
+
+
+// SP //
+
+
+@include sp {
+    .l-header {
+        display: none;
+    }
+}
