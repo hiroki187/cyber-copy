@@ -1,13 +1,19 @@
 $(function () {
-    $(".p-top-parent-nav-content").hover(function() {
-        const index = $(".p-top-parent-nav-content").index(this);
-        $(".p-top-child-nav").eq(index).addClass("active")
+    $(".p-top-header-front-nav-content").hover(function() {
+        $(".p-top-header-back-nav").removeClass("active");
+        const index = $(".p-top-header-front-nav-content").index(this);
+        $(".p-top-header-back-nav").eq(index).addClass("active");
         
-        // $(".child-nav").eq(index).removeClass("active").css("left", "240px");
     }, function() {
-        const index = $(".p-top-parent-nav-content").index(this);
-        $(".p-top-child-nav").eq(index).removeClass("active");
+        $(".p-top-header-back-nav").hover(function() {
+            $(".p-top-header-back-nav").$(this).addClass("active");
+        }, function() {
+            $(".p-top-header-back-nav").removeClass("active");
+            $(".p-top-header-back-nav").removeClass("active");
+        });
     });
+
+
 
     $(".p-top-top-slider").slick({
         autoplay: true,
@@ -51,24 +57,102 @@ $(function () {
             scrollTop: 0}, 100);
         return false;
     });
+    
 
 
-    // $(document).on('ready', function() {
-    // // });
-    // $(".regular_3").slick({
-    //   dots: true, // ドットインジケーターの表示
-    //   infinite: true, // スライドのループを有効にするか
-    //   slidesToShow: 3, // 表示するスライド数を設定
-    //   slidesToScroll: 3, // スクロールするスライド数を設定
-    // });
+    
+    const 
+    $btn = $(".p-top-switch-news [data-filter]"),
+    $list = $(".p-top-news-content-wrap [data-category], .p-top-section-title [data-category]");
+    
+    // $(".release").hide();
+
+    $btn.on('click', function(e) {
+      e.preventDefault();
+      
+        const $btnText = $(this).attr('data-filter');
+
+        
+        $list.fadeOut().promise().done(function() {
+        $list.filter(`[data-category = "${$btnText}"]`).fadeIn();
+        return false;
+        });
+        
+        // if ($btnText == 'all'){
+        //     $list.fadeOut().promise().done(function() {
+        //         $list.fadeIn();
+        //     });
+        // } else {
+        //     $list.fadeOut().promise().done(function() {
+        //         $list.filter(`[data-category = "${$btnText}"]`).fadeIn();
+        //     });
+        // }
+    });
+
+    
+    $(".p-top-switch-news-news").addClass("black");
+    $(".p-top-switch-news-release").addClass("white");
+    
+    $(".p-top-news-btn").on("click", function () {
+
+        $(".p-top-news-btn").addClass("black");
+
+        // if ($(".p-top-switch-news a").hasClass("white")) {
+        //     addClass("black");
+        // } else {
+        //     removeClass("black");
+        // }
+        
+        
+        // $(this).css(black),$(!this).css(white);
+    });
+    // $(".p-top-switch-news a").on("click", function () {
+        // const black = {
+        //     "background-color": "#000",
+        //     "color": "#fff"
+        // }
+        // const white = {
+        //     "background-color": "#fff",
+        //     "color": "#000"
+        // }
+
+        // $(".p-top-switch-news a").addClass("black");
+
+        // if ($(".p-top-switch-news a").hasClass("white")) {
+        //     addClass("black");
+        // } else {
+        //     removeClass("black");
+        // }
+        
+        
+        // $(this).css(black),$(!this).css(white);
+    // })
 
 
 
-    // $('.p-top-pickup-slider').bxSlider({
-    //     auto: true,
-    //     slideWidth: 640,
-    //     minSlides: 3
-    // });
 
+    // $(".p-top-header-sp-menu-content-wrap").hide();
+    $(".p-top-header-menu-wrap-wrap").on("click",function () {
+        $(".p-top-header-sp-menu-content-wrap").slideToggle();
+        return false;
+    });
+    
+    $(".p-top-sp-menu-header-icon").on("click", function () {
+        $(".p-top-header-sp-menu-content-wrap").slideToggle();
+        return false;
+    });
+    
+
+    
+    $(".p-top-footer-relation-contnet").hide();
+    $(".p-top-footer-relation-other-btn").on("click", function (e) {
+        e.preventDefault();
+        $(".p-top-footer-relation-contnet").slideToggle(350);
+        if ($(".p-top-footer-relation-other-btn span").hasClass("changed")) {
+            $(".p-top-footer-relation-other-btn span").removeClass("changed")
+        } else {
+            $(".p-top-footer-relation-other-btn span").addClass("changed")
+        }
+    });
 });
 
