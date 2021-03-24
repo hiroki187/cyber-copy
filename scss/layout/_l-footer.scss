@@ -178,25 +178,29 @@
     justify-content: center;
     li {
         margin: 5px;
+        color: #fff;
+        padding: 15px 20px 15px 20px;
+        margin: 5px;
+        position: relative;
+        display: block;
+        font-size: 0.9rem;
+        border: 1px solid #fff;
+        border-radius: 12px 0 12px 0;
+        transition: 0.35s;
+        &:hover {
+            color: #000000;
+            background-color: #ffffff;
+        }
         a {
             color: #fff;
-            padding: 15px 20px 15px 20px;
-            margin-right: 20px;
-            position: relative;
-            display: block;
             width: 100%;
             font-size: 0.9rem;
-            border: 1px solid #fff;
-            border-radius: 12px 0 12px 0;
-            transition: 0.35s;
             &:hover {
-                color: #000000;
-                background-color: #ffffff;
+                color: #000;
             }
-            span {
-                position: absolute;
-                right: 15px;
-            }
+        }
+        span {
+            margin-left: 10px;
         }
     }
 }
@@ -243,11 +247,11 @@
 
 
 
-// sp //
+// AJUST2 //
 
 
 
-@include sp {
+@include ajust2 {
 
     .l-footer {
         .p-top-footer-cuguide-wrap {
@@ -334,7 +338,7 @@
     .p-top-footer-relation {
         padding: 20px 20px;
         .p-top-footer-relation-other-wrap {
-            padding-bottom: 10px;
+            display: block;
             .p-top-footer-relation-other-btn {
                 color: #fff;
                 padding-left: 5px;
@@ -352,11 +356,16 @@
     .p-top-footer-relation-contnet {
         li {
             width: 100%;
+            padding: 12px 45px 12px 20px;
             a {
-                padding: 12px 20px;
+                display: inline-flex;
+                align-items: center;
+                padding: 0;
+                color: #fff;
+                width: 100%;
+                font-size: 0.9rem;
                 span {
                     position: static;
-                    margin-left: 20px;
                 }
             }
         }

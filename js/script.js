@@ -1,17 +1,25 @@
 $(function () {
-    $(".p-top-header-front-nav-content").hover(function() {
-        $(".p-top-header-back-nav").removeClass("active");
-        const index = $(".p-top-header-front-nav-content").index(this);
-        $(".p-top-header-back-nav").eq(index).addClass("active");
-        
-    }, function() {
-        $(".p-top-header-back-nav").hover(function() {
-            $(".p-top-header-back-nav").$(this).addClass("active");
-        }, function() {
-            $(".p-top-header-back-nav").removeClass("active");
-            $(".p-top-header-back-nav").removeClass("active");
-        });
-    });
+
+    const 
+    content = $(".p-top-header-front-nav-content"),
+    nav = $(".p-top-header-back-nav");
+    
+    nav.removeClass("active");
+    content.hover(
+    (e) => {
+      nav.removeClass("active");
+      const index = content.index(event.currentTarget);
+      nav.eq(index).addClass("active");
+    },
+    () => {
+      nav.hover(
+        () => {},
+        () => {
+          nav.removeClass("active");
+        }
+      );
+    }
+  );
 
 
 
@@ -59,100 +67,79 @@ $(function () {
     });
     
 
+    
+    const
+    $news_btn = $(".p-top-news-btn"),
+    $news_subtitle = $(".p-top-news-subtitle"),
+    $news_content = $(".p-top-news-content-wrap"),
+    // news_all = $(".p-top-news-btn", ".p-top-news-subtitle", ".p-top-news-content-wrap"),
+    btn_active = "news-btn-active",
+    subtitle_active = "news-subtitle-active",
+    content_active = "news-content-active";
+    // news_active_all = "news-btn-active", "news-subtitle-active","news-content-active";
+    
+    $(".p-top-switch-news-news").addClass(btn_active);
+    $(".subtitle-info").addClass(subtitle_active);
+    $(".content-info").addClass(content_active);
 
     
-    const 
-    $btn = $(".p-top-switch-news [data-filter]"),
-    $list = $(".p-top-news-content-wrap [data-category], .p-top-section-title [data-category]");
-    
-    // $(".release").hide();
+    $news_btn.on("click", function (e) {
+        e.preventDefault();
+        // news_all.removeClass(btn_active, subtitle_active, content_active);
+        $news_btn.removeClass(btn_active);
+        $news_subtitle.removeClass(subtitle_active);
+        $news_content.removeClass(content_active);
 
-    $btn.on('click', function(e) {
-      e.preventDefault();
-      
-        const $btnText = $(this).attr('data-filter');
+        $(this).addClass(btn_active);
 
-        
-        $list.fadeOut().promise().done(function() {
-        $list.filter(`[data-category = "${$btnText}"]`).fadeIn();
-        return false;
-        });
-        
-        // if ($btnText == 'all'){
-        //     $list.fadeOut().promise().done(function() {
-        //         $list.fadeIn();
-        //     });
-        // } else {
-        //     $list.fadeOut().promise().done(function() {
-        //         $list.filter(`[data-category = "${$btnText}"]`).fadeIn();
-        //     });
-        // }
+        const index = $news_btn.index(this);
+
+        $news_subtitle.eq(index).addClass(subtitle_active);
+        $news_content.eq(index).addClass(content_active);
+
     });
 
-    
-    $(".p-top-switch-news-news").addClass("black");
-    $(".p-top-switch-news-release").addClass("white");
-    
-    $(".p-top-news-btn").on("click", function () {
 
-        $(".p-top-news-btn").addClass("black");
+    // $('html *').css('overflow','hidden');
+    // $(window).on('touchmove.noScroll', function(e) {
+    // e.preventDefault();
+    // });
 
-        // if ($(".p-top-switch-news a").hasClass("white")) {
-        //     addClass("black");
-        // } else {
-        //     removeClass("black");
-        // }
-        
-        
-        // $(this).css(black),$(!this).css(white);
-    });
-    // $(".p-top-switch-news a").on("click", function () {
-        // const black = {
-        //     "background-color": "#000",
-        //     "color": "#fff"
-        // }
-        // const white = {
-        //     "background-color": "#fff",
-        //     "color": "#000"
-        // }
+    const
+    $sp_haeder = $(".p-top-header-sp-menu-content-wrap"),
+    $body = $(".l-main, .l-footer");
 
-        // $(".p-top-switch-news a").addClass("black");
-
-        // if ($(".p-top-switch-news a").hasClass("white")) {
-        //     addClass("black");
-        // } else {
-        //     removeClass("black");
-        // }
-        
-        
-        // $(this).css(black),$(!this).css(white);
-    // })
-
-
-
-
-    // $(".p-top-header-sp-menu-content-wrap").hide();
     $(".p-top-header-menu-wrap-wrap").on("click",function () {
-        $(".p-top-header-sp-menu-content-wrap").slideToggle();
+        $body.addClass("main-active");
+        $sp_haeder.slideToggle();
         return false;
     });
     
     $(".p-top-sp-menu-header-icon").on("click", function () {
-        $(".p-top-header-sp-menu-content-wrap").slideToggle();
+        $body.removeClass("main-active");
+        $sp_haeder.slideToggle();
         return false;
     });
     
 
-    
-    $(".p-top-footer-relation-contnet").hide();
-    $(".p-top-footer-relation-other-btn").on("click", function (e) {
-        e.preventDefault();
-        $(".p-top-footer-relation-contnet").slideToggle(350);
-        if ($(".p-top-footer-relation-other-btn span").hasClass("changed")) {
-            $(".p-top-footer-relation-other-btn span").removeClass("changed")
-        } else {
-            $(".p-top-footer-relation-other-btn span").addClass("changed")
-        }
-    });
+    const
+    $f_r_c = $(".p-top-footer-relation-contnet"),
+    $f_r_o_b = $(".p-top-footer-relation-other-btn"),
+    $f_r_o_b_s = $(".p-top-footer-relation-other-btn span");
+
+    if (window.matchMedia( "(max-width: 765px)" ).matches) {
+        $f_r_c.hide();
+        $f_r_o_b.on("click", function (e) {
+            e.preventDefault();
+            $f_r_c.slideToggle(350);
+            if ($f_r_o_b_s.hasClass("changed")) {
+                $f_r_o_b_s.removeClass("changed")
+            } else {
+                $f_r_o_b_s.addClass("changed")
+            }
+        });
+    } else {
+        $f_r_c.show();
+    }
 });
 
