@@ -3,7 +3,7 @@ $(function () {
     const 
     content = $(".p-top-header-front-nav-content"),
     nav = $(".p-top-header-back-nav");
-    
+
     nav.removeClass("active");
     content.hover(
     (e) => {
@@ -38,12 +38,13 @@ $(function () {
         centerPadding: '0',
         dots: true,
         focusOnSelect: true,
+        width: '100%',
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    centerPadding: '50px',
+                    centerPadding: '20%',
                 }
             }
         

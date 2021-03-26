@@ -1756,6 +1756,7 @@ a {
 
 .p-top-pickup-slider-wrap .p-top-pickup-slider li img {
   width: 100%;
+  height: 14vw;
 }
 
 .p-top-pickup-slider-wrap .p-top-pickup-slider .slick-clond {
@@ -2201,6 +2202,9 @@ a {
   }
   .p-top-pickup-slider-wrap .p-top-pickup-slider {
     width: 100%;
+  }
+  .p-top-pickup-slider-wrap .p-top-pickup-slider li img {
+    height: 30vw;
   }
   .p-top-plugin-snsbox {
     flex-direction: column;

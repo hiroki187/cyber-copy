@@ -561,6 +561,7 @@
             box-shadow: 1px 1px 5px;
             img {
                 width: 100%;
+                height: 14vw;
             }
         }
         .slick-clond {
@@ -1015,6 +1016,11 @@
     .p-top-pickup-slider-wrap  {
         .p-top-pickup-slider {
             width: 100%;
+            li {
+                img {
+                    height: 30vw;
+                }
+            }
         }
     }
 
